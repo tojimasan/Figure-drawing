@@ -18,9 +18,9 @@ export const ToolPanel = () => {
       transform={"translateX(-50%)"}
       display="flex"
       flexDirection="row"
-      gap={4}
-      px="8"
-      py="6"
+      gap={[2,4]}
+      px={[4,8]}
+      py={[3,6]}
       width="fit-content"
       height="fit-content"
       backgroundColor="white"

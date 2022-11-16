@@ -1,8 +1,9 @@
 import { ToolPanel } from "./features/drawing/components/ToolPanel";
 
 const App = () => {
+  const innerHeight = window.innerHeight;
   const css = {
-    height: "100vh",
+    height: innerHeight,
     width: "100vw",
   };
 

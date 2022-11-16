@@ -1,13 +1,12 @@
 import { IconButton, useToast } from "@chakra-ui/react";
 import { useState } from "react";
 
-export const ToolIconButton = ({
-  ariaLabel,
-  icon,
-}: {
+type Props = {
   ariaLabel: string;
   icon: any;
-}) => {
+};
+
+export const ToolIconButton = ({ ariaLabel, icon }: Props) => {
   const [isActive, setIsActive] = useState(false);
   const primaryColor = "#46B2EF";
   const toast = useToast();
@@ -20,9 +19,12 @@ export const ToolIconButton = ({
       position: "top",
     });
   };
-  const handleOnClick = () => {
+  const handleOnClick = (): void => {
     setIsActive((prev) => !prev);
-    popToast();
+    // inactive → activeでToastを表示する
+    if (!isActive) {
+      popToast();
+    }
   };
 
   return (

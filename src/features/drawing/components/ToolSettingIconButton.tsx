@@ -1,8 +1,12 @@
 import { IconButton } from "@chakra-ui/react";
 import { HiOutlineDotsVertical } from "react-icons/hi";
 
-export const ToolSetingIconButton = ({ ariaLabel }: { ariaLabel: string }) => {
-  const handleOnClick = () => {
+type Props = {
+  ariaLabel: string;
+};
+
+export const ToolSetingIconButton = ({ ariaLabel }: Props) => {
+  const handleOnClick = (): void => {
     console.log("モーダルを開きます");
   };
 
