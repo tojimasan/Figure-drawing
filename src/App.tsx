@@ -1,9 +1,17 @@
-function App() {
-  return (
-    <div className="App">
-      App
-    </div>
-  )
-}
+import { ToolPanel } from "./features/drawing/components/ToolPanel";
 
-export default App
+const App = () => {
+  const innerHeight = window.innerHeight;
+  const css = {
+    height: innerHeight,
+    width: "100vw",
+  };
+
+  return (
+    <div className="App" style={css}>
+      <ToolPanel />
+    </div>
+  );
+};
+
+export default App;
